@@ -1,0 +1,16 @@
+<div class="card m-2">
+  <div class="container">
+    <a href="songList/{{item.id}}">
+      <img src="{{item.cover.url}}" class="card-img my-3 img-responsive" alt="Torches">
+    </a>
+    <div class="card-block m-1">
+      <h4 class="card-title">{{item.ablum_name}}</h4>
+      <h5 class="card-subtitle text-muted">{{item.ablum_singer.singer_name}}</h5>
+      <footer class="blockquote-footer">
+        <small class="text-right">
+          {{item.release_year}}
+        </small>
+      </footer>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+db.sqlite3
+docker-compose.yml
+docker-entrypoint.sh
+Dockerfile
+.vscode
+assets/
+cover/
+requirements.txt

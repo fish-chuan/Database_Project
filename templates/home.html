@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+  </ul>
+  {% if user.is_authenticated %}
+  <form class="form-inline my-2 my-lg-0" action="account/logout">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Logout</button>
+  </form>
+  {% else %}
+  <form class="form-inline my-2 my-lg-0" action="account/register">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Register</button>
+  </form>
+  <form class="form-inline my-2 my-lg-0" action="account/login">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Login</button>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="margin-top: 30px">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-4">
+      {% if user.is_authenticated %}
+      <h2>Hello {{user.username}}</h2>
+      {% else %}
+      <h2>Welcome</h2>
+      {% endif %}
+    </div>
+  </div>
+  <div class="row" style="padding: 20px">
+  </div>
+  <div class="row">
+      {% for item in data %}
+      <div class="col-sm-2">
+      {% include 'card.html' %}
+      </div>
+      {% endfor %}
+  </div>
+</div>
+{% endblock %}
