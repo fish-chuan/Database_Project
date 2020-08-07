@@ -7,5 +7,5 @@ assets/
 cover/
 requirements.txt
 poetry.lock
-pyproject.toml
-/main/migrations
+
+**/migrations/*
