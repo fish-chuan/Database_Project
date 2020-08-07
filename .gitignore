@@ -8,5 +8,5 @@ cover/
 requirements.txt
 poetry.lock
 
-!**/__pycache__/*
-!**/migrations/*
+*/__pycache__/
+**/migrations/*
