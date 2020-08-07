@@ -72,7 +72,7 @@ class Song(models.Model):
     ]
 
     language_type = models.CharField(
-        max_length=2,
+        max_length=3,
         choices=LANGUAGE_TYPE,
         default=chinese
     )

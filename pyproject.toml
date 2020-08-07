@@ -6,9 +6,9 @@ authors = ["Yu-chuan <newdavidlin@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "3.8.3"
-django = "2.2.12"
 pillow = "^7.1.2"
-mysqlclient = "^1.4.6"
+psycopg2 = "^2.8.5"
+django = "^3.1"
 
 [tool.poetry.dev-dependencies]
 
