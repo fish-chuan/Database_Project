@@ -9,4 +9,4 @@ requirements.txt
 poetry.lock
 
 **/migrations/*
-**ㄥ__pycache__/*
+**/__pycache__/*
